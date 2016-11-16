@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "fabricioferreira.coletaseletivatorres"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha3'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
+    compile 'com.google.android.gms:play-services-location:8.4.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1@aar'
+    testCompile 'junit:junit:4.12'
+}
